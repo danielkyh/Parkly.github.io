@@ -163,7 +163,11 @@ module.exports = function (grunt) {
           src: [
             '.tmp',
             '<%= yeoman.dist %>/{,*/}*',
-            '!<%= yeoman.dist %>/.git{,*/}*'
+            '!<%= yeoman.dist %>/.git{,*/}*',
+            '!<%= yeoman.dist %>/Procfile',
+            '!<%= yeoman.dist %>/package.json',
+            '!<%= yeoman.dist %>/web.js',
+            '!<%= yeoman.dist %>/node_modules'
           ]
         }]
       },
@@ -220,7 +224,7 @@ module.exports = function (grunt) {
             }
           }
       }
-    }, 
+    },
 
     // Renames files for browser caching purposes
     filerev: {
@@ -475,4 +479,19 @@ module.exports = function (grunt) {
     'test',
     'build'
   ]);
+
+  buildcontrol: {
+      options: {
+          dir: 'dist',
+          commit: true,
+          push: true,
+          message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
+      },
+      heroku: {
+          options: {
+              remote: 'git@heroku.com:park-ly.git',
+              branch: 'master'
+          }
+      }
+   };
 };

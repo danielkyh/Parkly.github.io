@@ -5,7 +5,7 @@ app.controller('LoginController', ['$scope', '$http', '$routeParams', '$uibModal
     var data = angular.copy($scope.formData)
     $http({
       method: 'POST',
-      url: 'http://localhost:3001/users/login',
+      url: 'https://parklytestserv.herokuapp.com/users/login',
       data: data,
       headers: {
         'Content-Type': 'application/json; charset=utf-8'

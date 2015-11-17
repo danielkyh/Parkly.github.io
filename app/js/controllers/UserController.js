@@ -13,7 +13,7 @@ app.controller('UserController', ['$scope', '$cookies', '$http', "$routeParams",
   if ($routeParams.u_id) {
     $http({
       method: 'GET',
-      url: ('http://localhost:3001/users/' + $routeParams.u_id + '/profile'),
+      url: ('https://parklytestserv.herokuapp.com/users/' + $routeParams.u_id + '/profile'),
       headers:{
         'Content-Type': 'application/json; charset=utf-8'
       }

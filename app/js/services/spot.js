@@ -19,7 +19,7 @@ app.factory('spot', [ function() {
 
 app.factory('spots', [ function() {
 
-  return $http.jsonp('http://localhost:3001/spots')
+  return $http.jsonp('https://parklytestserv.herokuapp.com/spots')
   .success(function(data) {
     return data;
   })

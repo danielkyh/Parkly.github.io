@@ -61,7 +61,7 @@ app.controller('SpotsController', ['$scope', '$http', '$routeParams', '$cookies'
       $http({
         method: 'POST',
         // withCredentials: true,
-        url: 'http://localhost:3001/spots',
+        url: 'https://parklytestserv.herokuapp.com/spots',
         data: data,
         headers: {
           'Content-Type': 'application/json; charset=utf-8'
@@ -82,7 +82,7 @@ app.controller('SpotsController', ['$scope', '$http', '$routeParams', '$cookies'
     console.log($routeParams.s_id)
     $http({
       method: 'GET',
-      url: ('http://localhost:3001/spots/' + $routeParams.s_id),
+      url: ('https://parklytestserv.herokuapp.com/spots/' + $routeParams.s_id),
       headers: {
         'Content-Type': 'application/json; charset=utf-8'
       }
@@ -105,7 +105,7 @@ app.controller('SpotsController', ['$scope', '$http', '$routeParams', '$cookies'
 
     $http({
       method: 'DELETE',
-      url: 'http://localhost:3001/reservations/' + reservation.id,
+      url: 'https://parklytestserv.herokuapp.com/reservations/' + reservation.id,
       headers:{
         'Content-Type': 'application/json; charset=utf-8'
       }

@@ -4,7 +4,7 @@ app.controller('MapController', ['$scope', '$http', '$cookies', '$window', funct
   var initi = function(){
     $http({
       method: 'GET',
-      url: 'http://localhost:3001/',
+      url: 'https://parklytestserv.herokuapp.com/',
       headers: {
         'Content-Type': 'application/json; charset=utf-8'
       }
@@ -97,7 +97,7 @@ app.controller('MapController', ['$scope', '$http', '$cookies', '$window', funct
       $http({
         method: 'POST',
         // withCredentials: true,
-        url: 'http://localhost:3001/',
+        url: 'https://parklytestserv.herokuapp.com/',
         data: data,
         headers: {
           'Content-Type': 'application/json; charset=utf-8'

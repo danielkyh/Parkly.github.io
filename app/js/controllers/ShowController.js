@@ -13,7 +13,7 @@ app.controller('ShowController', ['$scope', '$cookies', '$http', '$routeParams',
     console.log($routeParams.s_id)
     $http({
       method: 'GET',
-      url: ('http://localhost:3001/spots/' + $routeParams.s_id),
+      url: ('https://parklytestserv.herokuapp.com/spots/' + $routeParams.s_id),
       headers: {
         'Content-Type': 'application/json; charset=utf-8'
       }
@@ -41,7 +41,7 @@ app.controller('ShowController', ['$scope', '$cookies', '$http', '$routeParams',
     console.log(data);
     $http({
       method: 'POST',
-      url: 'http://localhost:3001/spots/' + $routeParams.s_id + '/reservation',
+      url: 'https://parklytestserv.herokuapp.com/spots/' + $routeParams.s_id + '/reservation',
       data: data,
       headers: {
         'Content-Type': 'application/json; charset=utf-8'

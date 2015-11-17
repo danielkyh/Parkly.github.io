@@ -7,7 +7,7 @@ app.controller('RegisterController', ['$scope', '$http', '$window', '$uibModalIn
     $http({
       method: 'POST',
       // withCredentials: true,
-      url: 'http://localhost:3001/users',
+      url: 'https://parklytestserv.herokuapp.com/users',
       data: data,
       headers: {
         'Content-Type': 'application/json; charset=utf-8'
@@ -23,10 +23,6 @@ app.controller('RegisterController', ['$scope', '$http', '$window', '$uibModalIn
       console.log(response)
       console.log("you got an error")
     })
-    // $http.post('localhost:8080/users/login', data)
-    //   .success(function(response){
-    //     console.log(response)
-    //   })
   }
 
    $scope.ok = function () {

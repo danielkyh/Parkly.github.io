@@ -479,19 +479,4 @@ module.exports = function (grunt) {
     'test',
     'build'
   ]);
-
-  buildcontrol: {
-      options: {
-          dir: 'dist',
-          commit: true,
-          push: true,
-          message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
-      },
-      heroku: {
-          options: {
-              remote: 'git@heroku.com:park-ly.git',
-              branch: 'master'
-          }
-      }
-   };
 };
